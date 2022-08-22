@@ -27,7 +27,7 @@ SECRET_KEY = env('SECRET_KEY')    # спрятали секретный ключ
 DEBUG = env('DEBUG')  # также перенесли в .env
 
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -135,6 +135,12 @@ MODELTRANSLATION_DEFAULT_LANGUAGE = 'ru'
 
 
 STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+"""Настройка работы с базой данных"""
+import dj_database_url
+db_from_env = dj_database_url.config()
+DATABASES['default'].update(db_from_env)
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field

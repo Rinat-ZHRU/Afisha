@@ -1,0 +1,1 @@
+web: python manage.py migrate && gunicorn afisha_progect.wsgi --log-file -
