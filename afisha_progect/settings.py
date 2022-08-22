@@ -35,8 +35,8 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
-    'modeltranslation',
     'jazzmin',
+    'modeltranslation',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -135,9 +135,7 @@ MODELTRANSLATION_DEFAULT_LANGUAGE = 'ru'
 
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-
-
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 """Настройка работы с базой данных"""
@@ -159,3 +157,19 @@ REST_FRAMEWORK = {
     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend']
 }
 
+# JAZZMIN
+
+JAZZMIN_SETTINGS = {
+    "site_title": "Afisha Admin",
+    "site_header": "Afisha",
+    "site_brand": "Afisha",
+    "welcome_sign": "Welcome to Afisha admin panel",
+    "show_sidebar": True,
+    "user_avatar": None,
+    "changeform_format": "single",
+    "changeform_format_overrides": {"auth.user": "collapsible", "auth.group": "vertical_tabs"},
+}
+
+JAZZMIN_UI_TWEAKS = {
+    "dark_mode_theme": "cyborg",
+}
