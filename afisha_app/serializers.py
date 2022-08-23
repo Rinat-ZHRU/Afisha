@@ -21,4 +21,5 @@ class ChapterSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Chapter
-        fields = '__all__'  # все поля
+        fields = ('name', 'premiere', 'description', 'address', 'date', 'price',
+                  'contacts', 'website', 'image', 'category', 'genre')
