@@ -16,7 +16,7 @@ class GenreAdmin(TranslationAdmin):
 @admin.register(Chapter)
 class ChapterAdmin(TranslationAdmin):
     fields = ('name', 'premiere', 'description', 'address',
-              'date', 'price', 'contacts', 'website', 'image', 'category', 'genre')
+              'date', 'price', 'contacts', 'website', 'image', 'category', 'genre',)
 
 
 
