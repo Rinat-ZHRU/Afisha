@@ -11,7 +11,7 @@ class CategorySerializer(serializers.ModelSerializer):
 class GenreSerializer(serializers.ModelSerializer):
     class Meta:
         model = Genre
-        fields = '__all__'  # все поля
+        fields = '__all__'
 
 
 class ChapterSerializer(serializers.ModelSerializer):

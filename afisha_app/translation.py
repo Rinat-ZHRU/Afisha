@@ -4,7 +4,7 @@ from afisha_app.models import Chapter, Category, Genre
 
 @register(Chapter)
 class ChapterTranslationOptions(TranslationOptions):
-    fields = ('name', 'premiere', 'description', 'address', 'date', 'price', 'contacts')
+    fields = ('name', 'premiere', 'description', 'address')
 
 
 @register(Category)
